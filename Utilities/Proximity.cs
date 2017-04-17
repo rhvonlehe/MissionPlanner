@@ -76,6 +76,7 @@ namespace MissionPlanner.Utilities
         private void Temp_Paint(object sender, PaintEventArgs e)
         {
             var rawdata = _dS.GetRaw();
+            //temp.BackColor = Color.Black;
 
             e.Graphics.Clear(temp.BackColor);
 
@@ -108,6 +109,7 @@ namespace MissionPlanner.Utilities
                 var length = location.length();
 
                 Pen redpen = new Pen(Color.Red, 3);
+                Pen greenpen = new Pen(Color.Green, 3);
                 float move = 5;
                 var font = new Font(Control.DefaultFont.FontFamily, Control.DefaultFont.Size+2, FontStyle.Bold);
 

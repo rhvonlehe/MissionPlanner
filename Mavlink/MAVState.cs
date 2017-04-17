@@ -33,6 +33,11 @@ namespace MissionPlanner
             this.SoftwareVersions = "";
             this.SerialString = "";
             this.FrameString = "";
+
+            // TEMP
+            System.Diagnostics.Debug.WriteLine(String.Format("New MAVState with parent, sysid, compid :{0} {1} {2}", parent._id, sysid, compid));
+            // END TEMP
+
             if (sysid != 255 && !(compid == 0 && sysid == 0)) // && !parent.logreadmode)
                 this.Proximity = new Proximity(this);
 

@@ -226,9 +226,14 @@ namespace MissionPlanner
         int _bps2 = 0;
         DateTime _bpstime { get; set; }
 
+        // TEMP
+        static int _counter = 1;
+        public int _id;
 
         public MAVLinkInterface()
         {
+            _id = _counter++;
+
             // init fields
             MAVlist = new MAVList(this);
             this.BaseStream = new SerialPort();
