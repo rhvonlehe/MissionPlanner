@@ -165,6 +165,7 @@
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Messagetabtimer = new System.Windows.Forms.Timer(this.components);
             this.bindingSourceStatusTab = new System.Windows.Forms.BindingSource(this.components);
+            this.Proximity = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.MainH)).BeginInit();
             this.MainH.Panel1.SuspendLayout();
             this.MainH.Panel2.SuspendLayout();
@@ -417,6 +418,7 @@
             this.tabControlactions.Controls.Add(this.tablogbrowse);
             this.tabControlactions.Controls.Add(this.tabScripts);
             this.tabControlactions.Controls.Add(this.tabPagemessages);
+            this.tabControlactions.Controls.Add(this.Proximity);
             resources.ApplyResources(this.tabControlactions, "tabControlactions");
             this.tabControlactions.Name = "tabControlactions";
             this.tabControlactions.SelectedIndex = 0;
@@ -1914,7 +1916,6 @@
             // 
             this.altitudeAngelSettingsToolStripMenuItem.Name = "altitudeAngelSettingsToolStripMenuItem";
             resources.ApplyResources(this.altitudeAngelSettingsToolStripMenuItem, "altitudeAngelSettingsToolStripMenuItem");
-            altitudeAngelSettingsToolStripMenuItem.Visible = false;
             this.altitudeAngelSettingsToolStripMenuItem.Click += new System.EventHandler(this.altitudeAngelSettingsToolStripMenuItem_Click);
             // 
             // but_disablejoystick
@@ -1940,7 +1941,7 @@
             this.windDir1.BackColor = System.Drawing.Color.Transparent;
             this.windDir1.DataBindings.Add(new System.Windows.Forms.Binding("Direction", this.bindingSource1, "wind_dir", true, System.Windows.Forms.DataSourceUpdateMode.Never));
             this.windDir1.DataBindings.Add(new System.Windows.Forms.Binding("Speed", this.bindingSource1, "wind_vel", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.windDir1.Direction = 360D;
+            this.windDir1.Direction = 180D;
             resources.ApplyResources(this.windDir1, "windDir1");
             this.windDir1.Name = "windDir1";
             this.windDir1.Speed = 0D;
@@ -2156,6 +2157,13 @@
             // bindingSourceStatusTab
             // 
             this.bindingSourceStatusTab.DataSource = typeof(MissionPlanner.CurrentState);
+            // 
+            // Proximity
+            // 
+            resources.ApplyResources(this.Proximity, "Proximity");
+            this.Proximity.Name = "Proximity";
+            this.Proximity.UseVisualStyleBackColor = true;
+            this.Proximity.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // FlightData
             // 
@@ -2377,5 +2385,6 @@
         private System.Windows.Forms.ToolStripMenuItem altitudeAngelSettingsToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStripQuickView;
         private System.Windows.Forms.ToolStripMenuItem setViewCountToolStripMenuItem;
+        private System.Windows.Forms.TabPage Proximity;
     }
 }
